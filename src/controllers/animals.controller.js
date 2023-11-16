@@ -37,7 +37,7 @@ export const getAnimalById = (req, res) => {
 export const postAnimal = (req, res) => {
     const { name, type, age, color, image, vaccinated } = req.body;
 
-    if( !name || !type || !age || !color || !image || !vaccinated ) {
+    if( !name || !type || !age || !color || !image ) {
         return res.status(400).send({ message: 'Incomplete data' }); 
     }
 
